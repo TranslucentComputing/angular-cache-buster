@@ -36,7 +36,7 @@ describe('ngCacheBuster', function () {
       it('should add a cache buster', function() {
         var req = '/task/1234';
         var regex_friendly_req = req.replace(/\//g, '\\/');
-        var expected = new RegExp(regex_friendly_req + '\\?cacheBuster=[0-9]+')
+        var expected = new RegExp(regex_friendly_req + '\\?cb=[0-9]+');
         $httpBackend.expectGET(expected).respond(200);
         $http.get(req);
         $httpBackend.flush();
@@ -68,7 +68,7 @@ describe('ngCacheBuster', function () {
       it('should add a cache buster', function() {
         var req = '/views/home.html';
         var regex_friendly_req = req.replace(/\//g, '\\/');
-        var expected = new RegExp(regex_friendly_req + '\\?cacheBuster=[0-9]+')
+        var expected = new RegExp(regex_friendly_req + '\\?cb=[0-9]+');
 
         $httpBackend.expectGET(expected).respond(200);
         $http.get(req);
@@ -102,7 +102,7 @@ describe('ngCacheBuster', function () {
       it('should add a cache buster', function() {
         var req = '/task/1234';
         var regex_friendly_req = req.replace(/\//g, '\\/');
-        var expected = new RegExp(regex_friendly_req + '\\?cacheBuster=[0-9]+')
+        var expected = new RegExp(regex_friendly_req + '\\?cb=[0-9]+');
         $httpBackend.expectGET(expected).respond(200);
         $http.get(req);
         $httpBackend.flush();
@@ -135,7 +135,7 @@ describe('ngCacheBuster', function () {
       it('should add a cache buster', function() {
         var req = '/api/users/654645';
         var regex_friendly_req = req.replace(/\//g, '\\/');
-        var expected = new RegExp(regex_friendly_req + '\\?cacheBuster=[0-9]+')
+        var expected = new RegExp(regex_friendly_req + '\\?cb=[0-9]+');
         $httpBackend.expectGET(expected).respond(200);
         $http.get(req);
         $httpBackend.flush();
@@ -147,7 +147,7 @@ describe('ngCacheBuster', function () {
       it('should add a cache buster', function() {
         var req = '/api/orders/654645';
         var regex_friendly_req = req.replace(/\//g, '\\/');
-        var expected = new RegExp(regex_friendly_req + '\\?cacheBuster=[0-9]+')
+        var expected = new RegExp(regex_friendly_req + '\\?cb=[0-9]+');
         $httpBackend.expectGET(expected).respond(200);
         $http.get(req);
         $httpBackend.flush();
@@ -158,8 +158,8 @@ describe('ngCacheBuster', function () {
     describe('with an api/orders request with existing query-string parameter', function() {
       it('should add a cache buster, but not break existing params', function() {
         var req = '/api/orders/654645?orderid=115';
-        var regex_friendly_req = req.replace(/\//g, '\\/').replace(/\?/g,'\\?')
-        var expected = new RegExp(regex_friendly_req + '&cacheBuster=[0-9]+')
+        var regex_friendly_req = req.replace(/\//g, '\\/').replace(/\?/g,'\\?');
+        var expected = new RegExp(regex_friendly_req + '&cb=[0-9]+');
         $httpBackend.expectGET(expected).respond(200);
         $http.get(req);
         $httpBackend.flush();

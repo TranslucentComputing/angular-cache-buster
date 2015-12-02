@@ -1,6 +1,6 @@
 {
   "name": "angular-cache-buster",
-  "version": "0.4.3",
+  "version": "0.4.4",
   "description": "Cache Buster for AngularJS $http (and $resource). Especially useful with Internet Explorer (IE8, IE9)",
   "main": "angular-cache-buster.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/saintmac/angular-cache-buster.git"
+    "url": "git@github.com:saintmac/angular-cache-buster.git"
   },
   "keywords": [
     "angularjs",
