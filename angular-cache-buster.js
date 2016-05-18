@@ -40,12 +40,12 @@ angular.module('ngCacheBuster', [])
 
                     //add version number to update all the resources after new build
                     if (versionNumber) {
-                        if (!~config.url.indexOf('templates.') && !mdSvgPattern.test(config.url)) { //exclude some of the cached templates
+                        if (!~config.url.indexOf('templates.') && !mdSvgPattern.test(config.url)
+                            && (!~config.url.indexOf('.html') || config.url == "index.html")) { //exclude some of the cached templates
                             config.url = config.url.replace(/[?|&]v=\d+/, ''); //remove if exists
                             config.url += config.url.indexOf('?') === -1 ? '?' : '&'; //add correct modifier
                             config.url += 'v=' + versionNumber; //add version param
                         }
-
                     }
 
                     for (var i = 0; i < matchlist.length; i++) {
