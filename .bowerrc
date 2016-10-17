@@ -1,0 +1,16 @@
+{
+  "directory": "bower_components",
+  "nexus": {
+    "username": "nexus_bower",
+    "password": "a83zrRe78GgKVHmf"
+  },
+  "registry": {
+    "search": [
+      "https://nexus_bower:a83zrRe78GgKVHmf@nexus.tekstack.ca/repository/bower-all"
+    ],
+    "register": "https://nexus_bower:a83zrRe78GgKVHmf@nexus.tekstack.ca/repository/bower-internal"
+  },
+  "resolvers": [
+    "bower-nexus3-resolver"
+  ]
+}

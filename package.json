@@ -1,6 +1,6 @@
 {
   "name": "angular-cache-buster",
-  "version": "0.4.4",
+  "version": "0.4.5",
   "description": "Cache Buster for AngularJS $http (and $resource). Especially useful with Internet Explorer (IE8, IE9)",
   "main": "angular-cache-buster.js",
   "scripts": {
@@ -38,6 +38,7 @@
     "requirejs": "~2.1.11",
     "karma-requirejs": "~0.2.1",
     "karma-phantomjs-launcher": "~0.1.2",
-    "karma": "~0.12.15"
+    "karma": "~0.12.15",
+    "bower-nexus3-resolver": "~1.0.1"
   }
 }
