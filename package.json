@@ -1,8 +1,8 @@
 {
-  "name": "angular-cache-buster",
+  "name": "tc-angular-cache-buster",
   "version": "0.4.7",
   "description": "Cache Buster for AngularJS $http (and $resource). Especially useful with Internet Explorer (IE8, IE9)",
-  "main": "tc-angular-cache-buster.js",
+  "main": "angular-cache-buster.js",
   "scripts": {
     "test": "karma start"
   },
