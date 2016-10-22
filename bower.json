@@ -7,7 +7,7 @@
     "Patryk <patryk@translucentcomputing.com"
   ],
   "description": "Cache Buster for AngularJS $http (and $resource). Especially useful with Internet Explorer (IE8, IE9)",
-  "main": "angular-cache-buster.js",
+  "main": "tc-angular-cache-buster.js",
   "keywords": [
     "angularjs",
     "cache",
