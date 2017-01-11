@@ -1,6 +1,6 @@
 {
   "name": "tc-angular-cache-buster",
-  "version": "0.4.7",
+  "version": "0.4.8",
   "homepage": "https://github.com/saintmac/angular-cache-buster.git",
   "authors": [
     "saintmac <martin.saintmac@gmail.com>",

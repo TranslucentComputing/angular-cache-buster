@@ -42,7 +42,7 @@ angular.module('ngCacheBuster', [])
                     if (versionNumber) {
                         if (!~config.url.indexOf('templates.') && !mdSvgPattern.test(config.url)
                             && (!~config.url.indexOf('.html') || config.url == "index.html")) { //exclude some of the cached templates
-                            config.url = config.url.replace(/[?|&]v=\d+/, ''); //remove if exists
+                            config.url = config.url.replace(new RegExp('v='+versionNumber,'g'), ''); //remove if exists
                             config.url += config.url.indexOf('?') === -1 ? '?' : '&'; //add correct modifier
                             config.url += 'v=' + versionNumber; //add version param
                         }
